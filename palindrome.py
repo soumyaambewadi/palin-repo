@@ -1,13 +1,18 @@
 # palindrome.py
+import sys
 
-# Prompt user to enter a string
-text = input("Enter a string: ")
+# If argument is passed (Jenkins), use it
+if len(sys.argv) > 1:
+    text = sys.argv[1]
+else:
+    # Normal user input
+    text = input("Enter a string: ")
 
-# Reverse the string
-reversed_text = text[::-1]
+# Reverse
+rev = text[::-1]
 
-# Check if palindrome
-if text == reversed_text:
+# Check palindrome
+if text == rev:
     print(f"'{text}' is a palindrome")
 else:
     print(f"'{text}' is not a palindrome")
