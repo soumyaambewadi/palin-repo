@@ -1,16 +1,13 @@
-# Program to check if a string is a palindrome
+# palindrome.py
 
-import sys
+# Prompt user to enter a string
+text = input("Enter a string: ")
 
-# Check if Jenkins passes a command-line argument
-if len(sys.argv) > 1:
-    string = sys.argv[1]
+# Reverse the string
+reversed_text = text[::-1]
+
+# Check if palindrome
+if text == reversed_text:
+    print(f"'{text}' is a palindrome")
 else:
-    # Fallback for manual/local runs
-    string = input("Enter a string: ")
-
-# Check palindrome
-if string.lower() == string[::-1].lower():
-    print(f"'{string}' is a palindrome.")
-else:
-    print(f"'{string}' is not a palindrome.")
+    print(f"'{text}' is not a palindrome")
