@@ -1,18 +1,11 @@
-# palindrome.py
-import sys
+# palindrome_check.py
+# Program to check if a string is a palindrome
 
-# If argument is passed (Jenkins), use it
-if len(sys.argv) > 1:
-    text = sys.argv[1]
+# Taking user input
+string = input("Enter a string: ")
+
+# Converting to lowercase and checking
+if string.lower() == string[::-1].lower():
+    print(f"'{string}' is a palindrome.")
 else:
-    # Normal user input
-    text = input("Enter a string: ")
-
-# Reverse
-rev = text[::-1]
-
-# Check palindrome
-if text == rev:
-    print(f"'{text}' is a palindrome")
-else:
-    print(f"'{text}' is not a palindrome")
+    print(f"'{string}' is not a palindrome.")
